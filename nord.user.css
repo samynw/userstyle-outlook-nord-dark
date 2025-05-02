@@ -4,7 +4,7 @@
 @namespace    wowter.outlook.nord
 @author       wowter
 @license      No License
-@version      1.0.0
+@version      1.0.1
 ==/UserStyle== */
 
 @-moz-document url-prefix("https://outlook.office.com") {
@@ -158,7 +158,7 @@ html.dark.fui-FluentProviderr0 body {
     --HeaderSearchFilters: var(--nord9) !important;
 
     /* Translucent Overlays */
-    --black: var(--nord0);
+    --black: var(--nord5);
     --blackTranslucent50: rgba(var(--nord0-rgb), 0.5);
     --blackTranslucent40: rgba(var(--nord0-rgb), 0.4);
     --blackTranslucent20: rgba(var(--nord0-rgb), 0.2);
