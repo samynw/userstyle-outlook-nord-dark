@@ -1,0 +1,180 @@
+/* ==UserStyle==
+@name         Outlook: Dark Nord
+@description  A dark Nord-inspired theme for the Outlook web client. 
+@namespace    wowter.outlook.nord
+@author       wowter
+@license      No License
+@version      1.0.0
+==/UserStyle== */
+
+@-moz-document url-prefix("https://outlook.office.com") {
+/* 
+================================
+ 1. Navigation & Header Styling
+================================ 
+*/
+
+.o365sx-navbar,              /* Header Bar */
+.o365sx-appName,             /* Outlook Logo Area */
+.o365sx-button {             /* App Buttons */
+    background-color: var(--neutralPrimarySurface) !important;
+    background-size: 0, 0;
+    color: var(--themeLighter) !important;
+}
+
+/* 
+================================
+ 2. Sidebar & Folder Pane
+================================ 
+*/
+
+/* Folder List Background - exclude ConversationContainer */
+.customScrollBar:not([data-app-section="ConversationContainer"]) {
+    background-color: var(--neutralPrimarySurface);
+}
+
+.svg {                       /* Left Sidebar Icons (Mail, Calendar, etc.) */
+    fill: var(--neutralSecondary) !important;
+}
+
+/* 
+================================
+ 3. Message Pane and Reading View
+================================
+*/
+
+.ZAcPYMCSo9sb_nW5ACN2 {      /* Message List Rounded Corners */
+    border-radius: 5px !important;
+}
+
+.QQC3U6v8bOsCux7XSdB_ {      /* Reading Pane Selected Message Border */
+    border-radius: 5px !important;
+    border-color: var(--readingPaneCardBorder) !important;
+}
+
+.jblWRNBGWZ0jwdufJUx7 {      /* Reading Pane Unselected Message Border */
+    border-radius: 5px !important;
+    border-color: var(--neutralSecondarySurface) !important;
+}
+
+.svu1P {                     /* Buttons: Trust sender / Show blocked content */
+    color: var(--neutralDark);
+}
+
+/* 
+================================
+ 4. User Interface Elements
+================================ 
+*/
+
+.ms-Persona-initials {       /* Profile Initials */
+    color: var(--neutralPrimaryAlt);
+    background-color: var(--neutralSecondarySurface) !important;
+}
+
+.ms-Button--default {        /* Smart Reply Buttons */
+    border-radius: 5px !important;
+}
+
+
+/* 
+================================
+ 5. Global Theme Variables
+================================
+*/
+:root,
+html.dark.fui-FluentProviderr0 body {
+    --nord0: #2e3440;
+    --nord1: #3b4252;
+    --nord2: #434c5e;
+    --nord3: #4c566a;
+    --nord4: #d8dee9;
+    --nord5: #e5e9f0;
+    --nord6: #eceff4;
+    --nord7: #8fbcbb;
+    --nord8: #88c0d0;
+    --nord9: #81a1c1;
+    --nord10: #5e81ac;
+    --nord11: #bf616a;
+    --nord12: #d08770;
+    --nord13: #ebcb8b;
+    --nord14: #a3be8c;
+    --nord15: #b48ead;
+    --nord0-rgb: 46, 52, 64;
+    --nord1-rgb: 59, 66, 82;
+    --nord2-rgb: 67, 76, 94;
+    --nord3-rgb: 76, 86, 106;
+    --nord4-rgb: 216, 222, 233;
+    --nord5-rgb: 229, 233, 240;
+    --nord6-rgb: 236, 239, 244;
+    --nord7-rgb: 143, 188, 187;
+    --nord8-rgb: 136, 192, 208;
+    --nord9-rgb: 129, 161, 193;
+    --nord10-rgb: 94, 129, 172;
+    --nord11-rgb: 191, 97, 106;
+    --nord12-rgb: 208, 135, 112;
+    --nord13-rgb: 235, 203, 139;
+    --nord14-rgb: 163, 190, 140;
+    --nord15-rgb: 180, 142, 173;
+
+    /* Toolbar & Pane Colors */
+    --neutralLighter: var(--nord1) !important;
+    --neutralLighterAlt: var(--nord0) !important;
+    --white: var(--nord0) !important;
+    --themeLight: var(--nord2) !important;
+    --themeDark: var(--nord5) !important;
+    --themeDarkAlt: var(--nord10) !important;
+    --themeDarker: var(--nord12) !important;
+    --themeLighter: var(--nord8) !important;
+    --themePrimary: var(--nord7) !important;
+    --themeSecondarySurfaceSelected: var(--nord10);
+    --colorNeutralForeground3BrandSelected: var(--nord7) !important;
+
+    /* Typography and Iconography */
+    --neutralDark: var(--nord6) !important;
+    --neutralPrimary: var(--nord4) !important;
+    --neutralPrimaryAlt: var(--nord5);
+    --neutralSecondary: var(--nord9) !important;
+    --neutralSecondaryAlt: var(--nord9);
+    --neutralTertiary: var(--nord10);
+    --neutralTertiaryAlt: var(--nord2);
+    --neutralQuaternary: var(--nord2);
+
+    /* Backgrounds & Surfaces */
+    --neutralPrimarySurface: var(--nord0);
+    --neutralSecondarySurface: var(--nord3);
+    --neutralTertiarySurface: var(--nord3);
+    --neutralQuaternaryAlt: var(--nord2);
+    --neutralLight: var(--nord1);
+    --richUserContentBackground: var(--nord1);
+    --composeNeutralBackground: var(--nord0);
+    --composeNeutralLighterBackground: var(--nord1);
+    --colorNeutralBackground1: var(--nord0);
+
+    /* UI Borders & Highlights */
+    --readingPaneCardBorder: var(--nord10);
+    --readingPaneCardFocusBorder: var(--nord9);
+    --flaggedMessage: var(--nord11) !important;
+    --HeaderSearchFilters: var(--nord9) !important;
+
+    /* Translucent Overlays */
+    --black: var(--nord0);
+    --blackTranslucent50: rgba(var(--nord0-rgb), 0.5);
+    --blackTranslucent40: rgba(var(--nord0-rgb), 0.4);
+    --blackTranslucent20: rgba(var(--nord0-rgb), 0.2);
+    --blackTranslucent10: rgba(var(--nord0-rgb), 0.1);
+    --whiteTranslucent40: rgba(var(--nord6-rgb), 0.4);
+    --whiteTranslucent50: rgba(var(--nord6-rgb), 0.5);
+    --whiteTranslucent65: rgba(var(--nord6-rgb), 0.65);
+    --whiteTranslucent70: rgba(var(--nord6-rgb), 0.7);
+    --whiteTranslucent90: rgba(var(--nord6-rgb), 0.9);
+    --fallback-white: var(--nord2) !important;
+
+    /* Accent Colors */
+    --redDark: var(--nord11);
+    --green20: var(--nord14);
+    --purple: var(--nord15);
+    --suiteuxNeutralLight: var(--nord3);
+    --suiteuxNeutralSecondary: var(--nord4);
+}
+}
